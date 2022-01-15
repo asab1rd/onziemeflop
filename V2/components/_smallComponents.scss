@@ -1,0 +1,63 @@
+.selected-works {
+  margin-top: 100px;
+  margin-bottom: 20px;
+
+  h2 {
+    font-size: 44px;
+    padding: 20px 0;
+  }
+}
+
+.naming {
+  .name {
+    font-size: 64px;
+  }
+  .role {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-weight: 200;
+  }
+}
+
+.profile-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 14px;
+
+  .left {
+    grid-column: span 2;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .description {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    .book-me-container {
+      .book-me {
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 200;
+        cursor: pointer;
+
+        &:hover {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .right {
+    padding: 0 50px;
+    grid-column: span 2;
+    .profile-picture {
+      height: 50vh;
+      width: 100%;
+      background-color: black;
+    }
+  }
+}

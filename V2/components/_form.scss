@@ -1,0 +1,44 @@
+/** INPUTS STYLE **/
+.form-container {
+  width: 40%;
+  .input-container {
+    margin-bottom: 50px;
+  }
+  input.styled {
+    border: 0;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    font-size: 24px;
+    transition: all ease 1s;
+
+    &:active,
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      font-size: 20px;
+      font-weight: 100;
+      font-style: italic;
+    }
+  }
+
+  div.form-text {
+    font-size: 14px;
+  }
+
+  label {
+    &.form-label {
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+
+  button.submit {
+    background-color: transparent;
+    font-size: 24px;
+  }
+}
+/** END INPUTS STYLE **/

@@ -1,0 +1,37 @@
+{% extends "./base.html.twig" %}
+
+
+{% block body %}
+
+
+<div class="ui container">
+
+    <div class="ui three stackable cards">
+
+        {% for member in members %}
+            <div class="ui card four wide column">
+                <div class="image">
+                    <img src="https://picsum.photos/200/220">
+                </div>
+                <div class="content">
+                    <a class="header" href="/members/{{member.username}}">{{member.name}}</a>
+                    <div class="meta">
+                        <span class="role">{{member.role}}
+                    </div>
+                    <div class="description">
+                        {{member.description}}
+                    </div>
+                </div>
+                <div class="extra content">
+                    <a>
+                        <i class="like icon"></i>
+                        22 Likes
+                    </a>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

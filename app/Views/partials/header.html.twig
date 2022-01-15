@@ -1,0 +1,54 @@
+<header class="header">
+    <div class="ui top fixed menu inverted large">
+        <div class="ui container">
+            <div class="ui inverted secondary menu">
+                <a class="header item" href="/">
+
+
+                    {% if logoHazelText %}
+                        {{logoHazelText}}
+                    {% else %}
+                        ONZIEMEFLOP
+                    {% endif %}
+
+
+
+                </a>
+                <a class="{{navLinkActive is same as("home") ? "active"}} item" href="/">
+                    Home
+                </a>
+                <a class="{{navLinkActive is same as("members") ? "active"}} item" href="/members">
+                    Members
+                </a>
+            </div>
+
+            <div class="right menu">
+
+                {% if loggedin == true  %}
+                <div class="item">
+                    <div class="ui compact menu inverted">
+                        <div class="ui simple dropdown item">
+                            Mon compte
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" href="/post">Post</a>
+                                <a class="item" href="/profile/edit">Editer le profil</a>
+                                <a class="item" href="/bookings">Rendez-vous</a>
+                                <a class="item" href="/logout">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% else  %}
+
+
+                <div class="item">
+                    <a class="ui primary button" href="/register">
+                        Compte
+                    </a>
+                </div>
+                {% endif  %}
+            </div>
+        </div>
+    </div>
+</header>
